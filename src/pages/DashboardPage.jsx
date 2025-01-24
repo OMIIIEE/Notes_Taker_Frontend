@@ -113,10 +113,10 @@ const DashboardPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Navbar />
       <div className="container mx-auto py-8 px-6">
-        {/* Display User Details */}
+       
         {user && (
           <div className="mb-6 p-6 rounded-lg bg-white shadow-lg border border-gray-200">
-            <h2 className="text-3xl font-semibold text-gray-800">Welcome, {user.username}!</h2>
+            <h2 className="text-3xl font-semibold text-gray-800">Welcome, <span className="text-[#0C8CE9]">{user.username}</span>!</h2>
             <p className="text-gray-600 mt-2">
               <span className="font-medium">Email:</span> {user.email}
             </p>
