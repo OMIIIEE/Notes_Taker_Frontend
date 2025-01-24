@@ -8,7 +8,7 @@ const Navbar = () => {
 
    // Logout function
    const handleLogout = () => {
-    axios.get("http://localhost:8002/api/auth/logout")
+    axios.get("https://notes-taker-backend.onrender.com/api/auth/logout")
       .then(result => {
         if (result.data.Status) {
           localStorage.removeItem("valid");

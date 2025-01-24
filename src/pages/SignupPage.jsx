@@ -160,7 +160,7 @@ const Register = () => {
     if (validateForm()) {
       try {
         const res = await axios.post(
-          "http://localhost:8002/api/auth/signup",
+          "https://notes-taker-backend.onrender.com/api/auth/signup",
           user
         );
         console.log(res);

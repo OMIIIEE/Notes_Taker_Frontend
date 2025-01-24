@@ -15,7 +15,7 @@ const DashboardPage = () => {
   const fetchUserDetails = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:8002/api/auth/user", {
+      const response = await axios.get("https://notes-taker-backend.onrender.com/api/auth/user", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -31,7 +31,7 @@ const DashboardPage = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:8002/api/notes", {
+      const response = await axios.get("https://notes-taker-backend.onrender.com/api/notes", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ const DashboardPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:8002/api/notes",
+        "https://notes-taker-backend.onrender.com/api/notes",
         { title, content },
         {
           headers: {
@@ -70,7 +70,7 @@ const DashboardPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:8002/api/notes/${id}`,
+        `https://notes-taker-backend.onrender.com/api/notes/${id}`,
         { title, content },
         {
           headers: {
@@ -92,7 +92,7 @@ const DashboardPage = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8002/api/notes/${id}`, {
+      await axios.delete(`https://notes-taker-backend.onrender.com/api/notes/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
