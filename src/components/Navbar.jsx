@@ -24,13 +24,15 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
         <img src={logo} alt="" size='2' className='w-[60px]'/>
-        <Link to="/dashboard" className="font-bold">DashNote</Link>
+        <Link to="/dashboard" className="font-bold text-3xl">DASHNOTE</Link>
         </div>
         <div>
           
         <button
           onClick={handleLogout} // Call handleLogout on button click
-          className=" hover:bg-red-600 px-4 rounded text-sm font-medium"
+          className=" bg-[#0C8CE9] text-white py-3 px-6 rounded-lg shadow-xl 
+    font-bold transition-transform duration-300 
+    hover:bg-white hover:text-[#0C8CE9] hover:-translate-y-1 hover:shadow-2xl"
         >
           Sign Out
         </button>
