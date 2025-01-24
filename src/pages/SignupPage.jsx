@@ -119,7 +119,7 @@ const Register = () => {
 
       case "phone":
         if (!/^[7-9]/.test(value)) {
-          errorsTemp.phone = "Invalid phone number format";
+          errorsTemp.phone = "Invalid phone number format! should start with either 7,or 8, or 9";
         } else {
           errorsTemp.phone = validatePhone(value)
             ? ""
